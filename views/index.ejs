@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="Get your weather forecast">
+    <meta name="keywords" content="weather, forecast, weather prediction">
+    <meta name="author" content="dmkulazhenko@gmail.com">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="/css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Source+Code+Pro:wght@500&display=swap"
+          rel="stylesheet">
+    <link rel="icon" href="/img/icon.png">
+
+    <script src="/js/utils.js"></script>
+    <script src="/js/weather_current.js"></script>
+    <script src="/js/weather_list.js"></script>
+
+    <title>Прогноз Погоды</title>
+</head>
+<body>
+
+<div class="container">
+
+    <div class="header">
+        <h1>Погода здесь</h1>
+
+        <button class="update_geo_button_text" id="update_geo_button_text">
+            Обновить геолокацию
+        </button>
+        <button class="update_geo_button_img" id="update_geo_button_img">
+            <img src="/img/update_geo_button.png" alt="Обновить геолокацию">
+        </button>
+    </div>
+
+
+    <div class="city_box_current">
+        <div class="city_box_current_info">
+            <h2 id="city_box_current_name"></h2>
+            <!--suppress HtmlRequiredAltAttribute -->
+            <img id="city_box_current_img" src="/img/update_geo_button.png">
+            <span id="city_box_current_temp"></span>
+        </div>
+        <div class="city_box_current_data">
+            <div class="city_box_data_list">
+                <span>Ветер</span>
+                <span id="city_box_current_wind"></span>
+            </div>
+            <div class="city_box_data_list">
+                <span>Облачность</span>
+                <span id="city_box_current_clouds"></span>
+            </div>
+            <div class="city_box_data_list">
+                <span>Давление</span>
+                <span id="city_box_current_pressure"></span>
+            </div>
+            <div class="city_box_data_list">
+                <span>Влажность</span>
+                <span id="city_box_current_humidity"></span>
+            </div>
+            <div class="city_box_data_list">
+                <span>Координаты</span>
+                <span id="city_box_current_coords"></span>
+            </div>
+        </div>
+    </div>
+
+    <div class="city_new">
+        <h1>Избранное</h1>
+        <form id="city_new_form">
+            <!--suppress HtmlFormInputWithoutLabel -->
+            <input placeholder="Добавить новый город">
+            <button class="round_button">+</button>
+        </form>
+    </div>
+
+    <div class="city_list" id="city_list">
+        <div class="city_box" id="city_box" hidden>
+            <div class="city_box_header">
+                <span class="city_box_name"></span>
+                <span class="city_box_temp"></span>
+                <!--suppress HtmlRequiredAltAttribute -->
+                <img class="city_box_weather_icon" src="/img/update_geo_button.png"/>
+                <button class="round_button">x</button>
+            </div>
+            <div class="city_box_data_list">
+                <span>Ветер</span>
+                <span class="city_box_data_wind"></span>
+            </div>
+            <div class="city_box_data_list">
+                <span>Облачность</span>
+                <span class="city_box_data_clouds"></span>
+            </div>
+            <div class="city_box_data_list">
+                <span>Давление</span>
+                <span class="city_box_data_pressure"></span>
+            </div>
+            <div class="city_box_data_list">
+                <span>Влажность</span>
+                <span class="city_box_data_humidity"></span>
+            </div>
+            <div class="city_box_data_list">
+                <span>Координаты</span>
+                <span class="city_box_data_coords"></span>
+            </div>
+        </div>
+    </div>
+</div>
+
+</body>
+</html>
