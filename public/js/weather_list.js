@@ -16,6 +16,9 @@ function removeCityFromStorage(id) {
     xhr.open("DELETE", `${getCurrentHost()}/api/weather/favorites`);
     xhr.setRequestHeader("Content-Type", "application/json;charset=UTF-8");
     xhr.send(JSON.stringify({"id": id}));
+    xhr.onerror = function () {
+        alert("Не удалось удалить город.")
+    }
 }
 
 function removeCity(id) {
