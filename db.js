@@ -1,8 +1,7 @@
 const Sequelize = require("sequelize");
 const config = require("./config")();
 
-const sequelize = new Sequelize(config.DATABASE_DB, config.DATABASE_USER, config.DATABASE_PASSWORD, {
-    host: config.DATABASE_HOST,
+const sequelize = new Sequelize(config.DATABASE_URL, {
     native: true,
     ssl: true,
     dialect: 'postgres'
